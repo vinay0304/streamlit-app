@@ -205,7 +205,7 @@ def course_recommendation():
 
         return courses_dataset, unique_interests, unique_career_goals
     
-    courses_path = r"/Users/vinayvarma/Desktop/streamlit-app/data/courses_dataset.csv"  # Update with your actual path
+    courses_path = r"/Users/vinayvarma/Desktop/streamlit-app/data/courses_dataset.csv" 
     comparison_path = r"/Users/vinayvarma/Desktop/streamlit-app/data/course_comparison.csv"
 
     courses_dataset, unique_interests, \
