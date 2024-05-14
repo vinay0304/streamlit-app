@@ -1,4 +1,5 @@
 Run the following command from the project directory
-`conda create -n <environment-name> --file req.txt`
-`conda activate <environment-name>`
+"pip install -r req1.txt"
+"pip install streamlit"
+"pip install sentence-transformers"
 `streamlit run app.py`
