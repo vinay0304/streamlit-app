@@ -205,7 +205,7 @@ def course_recommendation():
 
         return courses_dataset, unique_interests, unique_career_goals
     
-    courses_path = r"/Users/vinayvarma/Desktop/streamlit-app/data/courses_dataset.csv" 
+    courses_path = r"/Users/vinayvarma/Desktop/streamlit-app/data/courses_dataset.csv"  
     comparison_path = r"/Users/vinayvarma/Desktop/streamlit-app/data/course_comparison.csv"
 
     courses_dataset, unique_interests, \
@@ -235,7 +235,7 @@ def course_recommendation():
                 cosine_row = pd.DataFrame([[name, cosine_values[i], recommendations[i]]], columns=['Name', 'Confidence', 'Course'])
                 header = not os.path.exists('course_confidence.csv')
                 cosine_row.to_csv('course_confidence.csv', mode='a', header=header, index=False)
-                st.markdown(f"<div style='background-color:#ccffcc; font-size:20px; font-weight:bold; border-radius:5px; padding:10px;'>{course}</div><br>", unsafe_allow_html=True)
+                st.markdown(f"<div style='background-color:#C0C0C0; font-size:20px; font-weight:bold; border-radius:5px; padding:10px;'>{course}</div><br>", unsafe_allow_html=True)
             st.dataframe(comparison_dataset.loc[(comparison_dataset['Program'] == recommendations[0]) | (comparison_dataset['Program'] == recommendations[1])])
 
     st.markdown(f'## Feedback Form')
@@ -255,7 +255,7 @@ def course_recommendation():
                 with open(os.path.join('uploads', resume.name), "wb") as f:
                     f.write(resume.getbuffer())
             else:
-                st.error("Please Upoload teh resume to proceed")
+                st.error("Please Upload the resume to proceed")
             st.success("Thank you for your feedback!")
 
 def admin():
